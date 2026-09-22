@@ -1,0 +1,32 @@
+name: RAG offline acceptance
+on: [push, pull_request]
+jobs:
+  tests:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e ".[dev]"
+      - run: python -m ruff check --select E9,F63,F7,F82 src tests
+      - run: python -m pytest -q
+      - run: python -m research_copilot.evaluation --output .data/offline-evaluation.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: offline-evaluation-${{ matrix.os }}
+          path: .data/offline-evaluation.json
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t research-copilot:test .
+      - run: |
+          docker run -d --name copilot -p 127.0.0.1:8787:8787 research-copilot:test
+          for i in $(seq 1 30); do curl --fail http://127.0.0.1:8787/health && break || sleep 2; done
+          curl --fail -X POST http://127.0.0.1:8787/api/evaluations > /tmp/evaluation.json
+          python -c "import json; r=json.load(open('/tmp/evaluation.json')); assert r['passed']==r['total']==6"
+          docker stop copilot

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Research Copilot · 资料研究助手</title><link rel="stylesheet" href="/static/styles.css"><script src="/static/app.js" defer></script></head>
+<body>
+<header><a class="brand" href="/"><span class="logo">R</span><span>Research Copilot<small>让每个回答有据可查</small></span></a><div class="header-right"><span id="mode" class="badge">正在连接</span><a href="/docs" target="_blank" rel="noopener">API 文档 ↗</a></div></header>
+<main>
+<aside class="library card"><div class="section-top"><div><p class="eyebrow">YOUR KNOWLEDGE</p><h2>资料库</h2></div><span id="doc-count" class="count">0</span></div><p class="muted">上传资料，再围绕原文提问。来源会随回答一同呈现。</p>
+<form id="upload-form"><label class="upload-zone" for="file"><strong>＋ 添加文档</strong><span>TXT、Markdown 或 PDF · 最大 8 MB</span><input type="file" id="file" accept=".txt,.md,.pdf" required></label><button class="primary wide" type="submit" id="upload-btn">上传并建立索引</button></form>
+<button class="secondary wide" id="sample-btn">试用一份合成资料</button><div id="documents" class="document-list"></div><p class="note">PDF 需包含文本层。文件只用于本机演示；真实 Qwen 模式会把切片和问题发送给配置的模型服务。</p>
+<div class="divider"></div><div class="section-top"><h3>离线验收</h3><button id="eval-btn" class="text-button">运行检查 →</button></div><p class="note">使用独立的合成资料验证功能，不代表真实模型效果。</p><div id="eval-results"></div></aside>
+<section class="workspace"><div class="workspace-heading"><div><p class="eyebrow">READ · RETRIEVE · REASON</p><h1>从资料出发，找到答案。</h1></div><button id="reset-btn" class="secondary">新建对话</button></div>
+<div class="mode-notice" id="mode-notice">正在读取运行配置…</div><div id="messages" class="messages" aria-live="polite"><div class="welcome"><span class="welcome-icon">⌕</span><h2>先放入资料，或加载示例。</h2><p>我会检索相关段落、核对引用，并在资料不足时说明原因。</p><div class="prompts"><button data-prompt="北极星索引保存什么？">北极星索引保存什么？ ↗</button><button data-prompt="混合检索如何融合结果？">混合检索如何融合结果？ ↗</button><button data-prompt="计算 (12 + 8) / 4">试试只读计算器 ↗</button></div></div></div>
+<form id="chat-form" class="composer"><label class="sr-only" for="question">向资料提问</label><textarea id="question" maxlength="2000" placeholder="向资料提问，也可以接着问“它的更新周期呢？”" rows="2" required></textarea><div class="composer-bottom"><span id="session-info">新对话 · 支持多轮追问</span><button id="send-btn" class="primary" type="submit">发送问题 ↑</button></div></form><p class="disclaimer" id="disclaimer"></p></section>
+</main><div id="toast" role="status" hidden></div>
+</body></html>
