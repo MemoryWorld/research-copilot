@@ -20,6 +20,7 @@ jobs:
         with:
           name: offline-evaluation-${{ matrix.os }}
           path: .data/*.json
+          include-hidden-files: true
   docker:
     runs-on: ubuntu-latest
     steps:
