@@ -70,6 +70,24 @@ python -m research_copilot.evaluation --output .data/offline-evaluation.json
 
 GitHub Actions 在 Windows/Linux 上执行关键静态检查、测试与验收，并上传 JSON 验收产物。Docker 构建/运行另做 Linux smoke test。
 
+### 带标注的检索与问答评测
+
+```bash
+python -m research_copilot.benchmark --output .data/quality-benchmark.json
+```
+
+这与上面的 6 项工程验收分开：固定 8 份合成资料和 12 个问题（10 个有答案、2 个无答案），分别运行 BM25、dense、RRF 融合、融合加重排四组配置。按文档去重后计算 Recall@3、MRR@3、nDCG@3；回答侧记录标注词覆盖、拒答、引用来源完整性及逐题耗时。多文档问题以全部相关文档为分母；异常保留在分母内，不当作正确拒答。数据版本、SHA-256、embedding 指纹与每题结果一起输出。
+
+当前合成数据规模小、由开发者编写，不是独立盲测或业务效果证明。离线基线实际记录了无答案问题误答和多文档综合回答不足；来源完整性通过不代表回答正确。完整结果与解释见 [评测说明](docs/quality-evaluation.md)。CI 会运行此评测并保留报告，运行错误使 CI 失败；质量分数偏低作为结果展示，不篡改阈值强行通过。
+
+真实 Qwen 评测沿用前述环境变量，并须显式选择供应商调用：
+
+```bash
+python -m research_copilot.benchmark --mode qwen --allow-provider-calls --output .data/qwen-quality.json
+```
+
+此命令会向已配置的服务发送合成资料和问题，产生 embedding、重排（如果启用）及回答请求；需自行配置可用账户，可能计费。默认离线命令即使环境中存在密钥也不会外联。公开报告目前只包含离线执行，未将接口契约测试写成真实模型测量。
+
 ## API 与 curl 演示
 
 Windows 使用 `curl.exe`。先保存一个 UTF-8 Markdown 文件作为演示资料。

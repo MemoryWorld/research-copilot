@@ -1,0 +1,28 @@
+{
+  "version": "synthetic-rag-v1",
+  "description": "Authored synthetic documents and labelled questions; small mechanism benchmark, not a business dataset or independent blind test.",
+  "documents": [
+    {"name": "index.md", "text": "# 北极星索引\n\n北极星索引每隔24小时刷新一次。索引记录资料切片及其出处。"},
+    {"name": "search.md", "text": "# 混合检索\n\n搜索系统将BM25词面召回与语义向量召回融合，RRF平滑常数是60。"},
+    {"name": "upload.md", "text": "# 资料入库\n\n资料上传支持TXT、Markdown和带文本层的PDF。单个文件最大8MB。扫描件应先执行OCR。"},
+    {"name": "refund.md", "text": "# 星桥商城退货\n\n星桥商城的未拆封商品可以在签收后7天内申请退货，运输费用由买家承担。"},
+    {"name": "delivery.md", "text": "# 星桥商城配送\n\n星桥商城的普通配送需要3个工作日，订单支付后可在订单详情查看物流记录。"},
+    {"name": "memory.md", "text": "# 会话记忆\n\n对话内容存入SQLite数据库。最近3轮历史会进入回答上下文，退出后可恢复会话。"},
+    {"name": "tools.md", "text": "# 工具预算\n\nAgent最多执行6次只读工具调用，允许资料检索、文档列表和有界算术计算。"},
+    {"name": "jobs.md", "text": "# 作业记录\n\n异步作业保留待处理、运行中、成功、失败四种状态。失败记录保留异常类别供排查。"}
+  ],
+  "queries": [
+    {"id": "q01", "question": "北极星索引多久刷新？", "relevant": ["index.md"], "answer_terms": ["24"]},
+    {"id": "q02", "question": "搜索系统用哪两种召回方法？", "relevant": ["search.md"], "answer_terms": ["BM25", "向量"]},
+    {"id": "q03", "question": "RRF的平滑常数是什么？", "relevant": ["search.md"], "answer_terms": ["60"]},
+    {"id": "q04", "question": "资料上传的单个文件限制多大？", "relevant": ["upload.md"], "answer_terms": ["8MB"]},
+    {"id": "q05", "question": "星桥商城没拆封的东西收到后几天能退？", "relevant": ["refund.md"], "answer_terms": ["7天"]},
+    {"id": "q06", "question": "星桥商城正常寄送要多久？", "relevant": ["delivery.md"], "answer_terms": ["3个工作日"]},
+    {"id": "q07", "question": "会话记忆放在哪里，提供多少轮上下文？", "relevant": ["memory.md"], "answer_terms": ["SQLite", "3轮"]},
+    {"id": "q08", "question": "Agent最多调用多少次工具？", "relevant": ["tools.md"], "answer_terms": ["6次"]},
+    {"id": "q09", "question": "异步作业有哪些状态？", "relevant": ["jobs.md"], "answer_terms": ["待处理", "运行中", "成功", "失败"]},
+    {"id": "q10", "question": "星桥商城退货期限和普通配送时间分别是多少？", "relevant": ["refund.md", "delivery.md"], "answer_terms": ["7天", "3个工作日"]},
+    {"id": "q11", "question": "2028年的火星基地预算是多少？", "relevant": [], "answer_terms": []},
+    {"id": "q12", "question": "星桥商城的董事长出生在哪里？", "relevant": [], "answer_terms": []}
+  ]
+}

@@ -1,0 +1,1017 @@
+{
+  "data_source": "synthetic_labelled_benchmark",
+  "dataset_version": "synthetic-rag-v1",
+  "dataset_sha256": "f9628a0ad86483ad00cb01c13276f077a619ba8c5498fde573ce1a545120e42a",
+  "mode": "offline",
+  "model": null,
+  "reranker": "lexical",
+  "k": 3,
+  "variants": {
+    "bm25": {
+      "rows": [
+        {
+          "id": "q01",
+          "relevant": [
+            "index.md"
+          ],
+          "documents": [
+            "index.md",
+            "tools.md",
+            "search.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 4.413
+        },
+        {
+          "id": "q02",
+          "relevant": [
+            "search.md"
+          ],
+          "documents": [
+            "search.md",
+            "tools.md",
+            "jobs.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 1.931
+        },
+        {
+          "id": "q03",
+          "relevant": [
+            "search.md"
+          ],
+          "documents": [
+            "search.md",
+            "memory.md",
+            "jobs.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 1.783
+        },
+        {
+          "id": "q04",
+          "relevant": [
+            "upload.md"
+          ],
+          "documents": [
+            "upload.md",
+            "tools.md",
+            "delivery.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 1.753
+        },
+        {
+          "id": "q05",
+          "relevant": [
+            "refund.md"
+          ],
+          "documents": [
+            "refund.md",
+            "delivery.md",
+            "memory.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 1.845
+        },
+        {
+          "id": "q06",
+          "relevant": [
+            "delivery.md"
+          ],
+          "documents": [
+            "delivery.md",
+            "refund.md",
+            "tools.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 1.83
+        },
+        {
+          "id": "q07",
+          "relevant": [
+            "memory.md"
+          ],
+          "documents": [
+            "memory.md",
+            "tools.md",
+            "upload.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 1.799
+        },
+        {
+          "id": "q08",
+          "relevant": [
+            "tools.md"
+          ],
+          "documents": [
+            "tools.md",
+            "index.md",
+            "refund.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 1.871
+        },
+        {
+          "id": "q09",
+          "relevant": [
+            "jobs.md"
+          ],
+          "documents": [
+            "jobs.md",
+            "tools.md",
+            "delivery.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 1.793
+        },
+        {
+          "id": "q10",
+          "relevant": [
+            "refund.md",
+            "delivery.md"
+          ],
+          "documents": [
+            "delivery.md",
+            "refund.md",
+            "tools.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 1.947
+        },
+        {
+          "id": "q11",
+          "relevant": [],
+          "documents": [
+            "tools.md",
+            "search.md",
+            "refund.md"
+          ],
+          "metrics": null,
+          "latency_ms": 1.796
+        },
+        {
+          "id": "q12",
+          "relevant": [],
+          "documents": [
+            "refund.md",
+            "delivery.md",
+            "index.md"
+          ],
+          "metrics": null,
+          "latency_ms": 1.903
+        }
+      ],
+      "answerable_count": 10,
+      "errors": 0,
+      "mean": {
+        "recall_at_k": 1.0,
+        "mrr_at_k": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "median_latency_ms": 1.8375
+    },
+    "dense": {
+      "rows": [
+        {
+          "id": "q01",
+          "relevant": [
+            "index.md"
+          ],
+          "documents": [
+            "index.md",
+            "search.md",
+            "tools.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.147
+        },
+        {
+          "id": "q02",
+          "relevant": [
+            "search.md"
+          ],
+          "documents": [
+            "search.md",
+            "index.md",
+            "tools.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.107
+        },
+        {
+          "id": "q03",
+          "relevant": [
+            "search.md"
+          ],
+          "documents": [
+            "search.md",
+            "delivery.md",
+            "index.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.216
+        },
+        {
+          "id": "q04",
+          "relevant": [
+            "upload.md"
+          ],
+          "documents": [
+            "upload.md",
+            "tools.md",
+            "index.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.14
+        },
+        {
+          "id": "q05",
+          "relevant": [
+            "refund.md"
+          ],
+          "documents": [
+            "refund.md",
+            "delivery.md",
+            "jobs.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.103
+        },
+        {
+          "id": "q06",
+          "relevant": [
+            "delivery.md"
+          ],
+          "documents": [
+            "delivery.md",
+            "refund.md",
+            "tools.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.195
+        },
+        {
+          "id": "q07",
+          "relevant": [
+            "memory.md"
+          ],
+          "documents": [
+            "memory.md",
+            "index.md",
+            "delivery.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.2
+        },
+        {
+          "id": "q08",
+          "relevant": [
+            "tools.md"
+          ],
+          "documents": [
+            "tools.md",
+            "index.md",
+            "memory.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.036
+        },
+        {
+          "id": "q09",
+          "relevant": [
+            "jobs.md"
+          ],
+          "documents": [
+            "jobs.md",
+            "search.md",
+            "upload.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.317
+        },
+        {
+          "id": "q10",
+          "relevant": [
+            "refund.md",
+            "delivery.md"
+          ],
+          "documents": [
+            "refund.md",
+            "delivery.md",
+            "index.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.235
+        },
+        {
+          "id": "q11",
+          "relevant": [],
+          "documents": [
+            "search.md",
+            "upload.md",
+            "tools.md"
+          ],
+          "metrics": null,
+          "latency_ms": 2.067
+        },
+        {
+          "id": "q12",
+          "relevant": [],
+          "documents": [
+            "delivery.md",
+            "refund.md",
+            "upload.md"
+          ],
+          "metrics": null,
+          "latency_ms": 2.316
+        }
+      ],
+      "answerable_count": 10,
+      "errors": 0,
+      "mean": {
+        "recall_at_k": 1.0,
+        "mrr_at_k": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "median_latency_ms": 2.171
+    },
+    "hybrid": {
+      "rows": [
+        {
+          "id": "q01",
+          "relevant": [
+            "index.md"
+          ],
+          "documents": [
+            "index.md",
+            "search.md",
+            "tools.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.292
+        },
+        {
+          "id": "q02",
+          "relevant": [
+            "search.md"
+          ],
+          "documents": [
+            "search.md",
+            "tools.md",
+            "index.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.117
+        },
+        {
+          "id": "q03",
+          "relevant": [
+            "search.md"
+          ],
+          "documents": [
+            "search.md",
+            "jobs.md",
+            "delivery.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.119
+        },
+        {
+          "id": "q04",
+          "relevant": [
+            "upload.md"
+          ],
+          "documents": [
+            "upload.md",
+            "tools.md",
+            "index.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.483
+        },
+        {
+          "id": "q05",
+          "relevant": [
+            "refund.md"
+          ],
+          "documents": [
+            "refund.md",
+            "delivery.md",
+            "jobs.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.16
+        },
+        {
+          "id": "q06",
+          "relevant": [
+            "delivery.md"
+          ],
+          "documents": [
+            "delivery.md",
+            "refund.md",
+            "tools.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.054
+        },
+        {
+          "id": "q07",
+          "relevant": [
+            "memory.md"
+          ],
+          "documents": [
+            "memory.md",
+            "upload.md",
+            "delivery.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.427
+        },
+        {
+          "id": "q08",
+          "relevant": [
+            "tools.md"
+          ],
+          "documents": [
+            "tools.md",
+            "index.md",
+            "refund.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.222
+        },
+        {
+          "id": "q09",
+          "relevant": [
+            "jobs.md"
+          ],
+          "documents": [
+            "jobs.md",
+            "tools.md",
+            "search.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.036
+        },
+        {
+          "id": "q10",
+          "relevant": [
+            "refund.md",
+            "delivery.md"
+          ],
+          "documents": [
+            "delivery.md",
+            "refund.md",
+            "index.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.272
+        },
+        {
+          "id": "q11",
+          "relevant": [],
+          "documents": [
+            "search.md",
+            "tools.md",
+            "upload.md"
+          ],
+          "metrics": null,
+          "latency_ms": 2.114
+        },
+        {
+          "id": "q12",
+          "relevant": [],
+          "documents": [
+            "delivery.md",
+            "refund.md",
+            "index.md"
+          ],
+          "metrics": null,
+          "latency_ms": 2.07
+        }
+      ],
+      "answerable_count": 10,
+      "errors": 0,
+      "mean": {
+        "recall_at_k": 1.0,
+        "mrr_at_k": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "median_latency_ms": 2.1395
+    },
+    "hybrid_rerank": {
+      "rows": [
+        {
+          "id": "q01",
+          "relevant": [
+            "index.md"
+          ],
+          "documents": [
+            "index.md",
+            "tools.md",
+            "search.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.217
+        },
+        {
+          "id": "q02",
+          "relevant": [
+            "search.md"
+          ],
+          "documents": [
+            "search.md",
+            "tools.md",
+            "index.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.215
+        },
+        {
+          "id": "q03",
+          "relevant": [
+            "search.md"
+          ],
+          "documents": [
+            "search.md",
+            "delivery.md",
+            "jobs.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.089
+        },
+        {
+          "id": "q04",
+          "relevant": [
+            "upload.md"
+          ],
+          "documents": [
+            "upload.md",
+            "tools.md",
+            "index.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.193
+        },
+        {
+          "id": "q05",
+          "relevant": [
+            "refund.md"
+          ],
+          "documents": [
+            "refund.md",
+            "delivery.md",
+            "memory.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.392
+        },
+        {
+          "id": "q06",
+          "relevant": [
+            "delivery.md"
+          ],
+          "documents": [
+            "delivery.md",
+            "refund.md",
+            "tools.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.109
+        },
+        {
+          "id": "q07",
+          "relevant": [
+            "memory.md"
+          ],
+          "documents": [
+            "memory.md",
+            "delivery.md",
+            "upload.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.61
+        },
+        {
+          "id": "q08",
+          "relevant": [
+            "tools.md"
+          ],
+          "documents": [
+            "tools.md",
+            "index.md",
+            "memory.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.364
+        },
+        {
+          "id": "q09",
+          "relevant": [
+            "jobs.md"
+          ],
+          "documents": [
+            "jobs.md",
+            "tools.md",
+            "delivery.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.078
+        },
+        {
+          "id": "q10",
+          "relevant": [
+            "refund.md",
+            "delivery.md"
+          ],
+          "documents": [
+            "delivery.md",
+            "refund.md",
+            "index.md"
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "mrr_at_k": 1.0,
+            "ndcg_at_k": 1.0
+          },
+          "latency_ms": 2.305
+        },
+        {
+          "id": "q11",
+          "relevant": [],
+          "documents": [
+            "tools.md",
+            "delivery.md",
+            "refund.md"
+          ],
+          "metrics": null,
+          "latency_ms": 2.204
+        },
+        {
+          "id": "q12",
+          "relevant": [],
+          "documents": [
+            "delivery.md",
+            "refund.md",
+            "index.md"
+          ],
+          "metrics": null,
+          "latency_ms": 2.109
+        }
+      ],
+      "answerable_count": 10,
+      "errors": 0,
+      "mean": {
+        "recall_at_k": 1.0,
+        "mrr_at_k": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "median_latency_ms": 2.2095000000000002
+    }
+  },
+  "answers": [
+    {
+      "id": "q01",
+      "answerable": true,
+      "refused": false,
+      "answer": "【离线摘录演示】资料中写道：北极星索引每隔24小时刷新一次。索引记录资料切片及其出处。 [1]",
+      "cited_documents": [
+        "index.md"
+      ],
+      "all_labelled_terms_present": true,
+      "source_integrity": "source_id_and_verbatim_quote_passed",
+      "provider_usage": [],
+      "latency_ms": 14.197
+    },
+    {
+      "id": "q02",
+      "answerable": true,
+      "refused": false,
+      "answer": "【离线摘录演示】资料中写道：搜索系统将BM25词面召回与语义向量召回融合，RRF平滑常数是60。 [1]",
+      "cited_documents": [
+        "search.md"
+      ],
+      "all_labelled_terms_present": true,
+      "source_integrity": "source_id_and_verbatim_quote_passed",
+      "provider_usage": [],
+      "latency_ms": 17.303
+    },
+    {
+      "id": "q03",
+      "answerable": true,
+      "refused": false,
+      "answer": "【离线摘录演示】资料中写道：搜索系统将BM25词面召回与语义向量召回融合，RRF平滑常数是60。 [1]",
+      "cited_documents": [
+        "search.md"
+      ],
+      "all_labelled_terms_present": true,
+      "source_integrity": "source_id_and_verbatim_quote_passed",
+      "provider_usage": [],
+      "latency_ms": 18.287
+    },
+    {
+      "id": "q04",
+      "answerable": true,
+      "refused": false,
+      "answer": "【离线摘录演示】资料中写道：资料上传支持TXT、Markdown和带文本层的PDF。单个文件最大8MB。扫描件应先执行OCR。 [1]",
+      "cited_documents": [
+        "upload.md"
+      ],
+      "all_labelled_terms_present": true,
+      "source_integrity": "source_id_and_verbatim_quote_passed",
+      "provider_usage": [],
+      "latency_ms": 19.647
+    },
+    {
+      "id": "q05",
+      "answerable": true,
+      "refused": false,
+      "answer": "【离线摘录演示】资料中写道：星桥商城的未拆封商品可以在签收后7天内申请退货，运输费用由买家承担。 [1]",
+      "cited_documents": [
+        "refund.md"
+      ],
+      "all_labelled_terms_present": true,
+      "source_integrity": "source_id_and_verbatim_quote_passed",
+      "provider_usage": [],
+      "latency_ms": 16.856
+    },
+    {
+      "id": "q06",
+      "answerable": true,
+      "refused": false,
+      "answer": "【离线摘录演示】资料中写道：星桥商城的普通配送需要3个工作日，订单支付后可在订单详情查看物流记录。 [1]",
+      "cited_documents": [
+        "delivery.md"
+      ],
+      "all_labelled_terms_present": true,
+      "source_integrity": "source_id_and_verbatim_quote_passed",
+      "provider_usage": [],
+      "latency_ms": 17.491
+    },
+    {
+      "id": "q07",
+      "answerable": true,
+      "refused": false,
+      "answer": "【离线摘录演示】资料中写道：对话内容存入SQLite数据库。最近3轮历史会进入回答上下文，退出后可恢复会话。 [1]",
+      "cited_documents": [
+        "memory.md"
+      ],
+      "all_labelled_terms_present": true,
+      "source_integrity": "source_id_and_verbatim_quote_passed",
+      "provider_usage": [],
+      "latency_ms": 16.742
+    },
+    {
+      "id": "q08",
+      "answerable": true,
+      "refused": false,
+      "answer": "【离线摘录演示】资料中写道：Agent最多执行6次只读工具调用，允许资料检索、文档列表和有界算术计算。 [1]",
+      "cited_documents": [
+        "tools.md"
+      ],
+      "all_labelled_terms_present": true,
+      "source_integrity": "source_id_and_verbatim_quote_passed",
+      "provider_usage": [],
+      "latency_ms": 17.379
+    },
+    {
+      "id": "q09",
+      "answerable": true,
+      "refused": false,
+      "answer": "【离线摘录演示】资料中写道：异步作业保留待处理、运行中、成功、失败四种状态。失败记录保留异常类别供排查。 [1]",
+      "cited_documents": [
+        "jobs.md"
+      ],
+      "all_labelled_terms_present": true,
+      "source_integrity": "source_id_and_verbatim_quote_passed",
+      "provider_usage": [],
+      "latency_ms": 15.7
+    },
+    {
+      "id": "q10",
+      "answerable": true,
+      "refused": false,
+      "answer": "【离线摘录演示】资料中写道：星桥商城的普通配送需要3个工作日，订单支付后可在订单详情查看物流记录。 [1]",
+      "cited_documents": [
+        "delivery.md"
+      ],
+      "all_labelled_terms_present": false,
+      "source_integrity": "source_id_and_verbatim_quote_passed",
+      "provider_usage": [],
+      "latency_ms": 17.312
+    },
+    {
+      "id": "q11",
+      "answerable": false,
+      "refused": true,
+      "answer": "当前资料不足以支持可靠回答。请上传相关文档，或把问题说得更具体。",
+      "cited_documents": [],
+      "all_labelled_terms_present": false,
+      "source_integrity": "insufficient_retrieval_evidence",
+      "provider_usage": [],
+      "latency_ms": 16.427
+    },
+    {
+      "id": "q12",
+      "answerable": false,
+      "refused": false,
+      "answer": "【离线摘录演示】资料中写道：星桥商城的普通配送需要3个工作日，订单支付后可在订单详情查看物流记录。 [1]",
+      "cited_documents": [
+        "delivery.md"
+      ],
+      "all_labelled_terms_present": false,
+      "source_integrity": "source_id_and_verbatim_quote_passed",
+      "provider_usage": [],
+      "latency_ms": 20.284
+    }
+  ],
+  "limitations": [
+    "Small authored dataset; not independent business evaluation or model ranking.",
+    "Answer term coverage is not semantic correctness or factual entailment.",
+    "Provider usage covers answer generation only; not total cost.",
+    "Failed calls remain in denominators and are reported explicitly."
+  ],
+  "embedding_fingerprint": "offline:feature-hashing:256:v1",
+  "answer_metrics": {
+    "labelled_term_coverage": {
+      "numerator": 9,
+      "denominator": 10,
+      "rate": 0.9
+    },
+    "answerable_non_refusal": {
+      "numerator": 10,
+      "denominator": 10,
+      "rate": 1.0
+    },
+    "unanswerable_refusal": {
+      "numerator": 1,
+      "denominator": 2,
+      "rate": 0.5
+    },
+    "answered_source_integrity": {
+      "numerator": 11,
+      "denominator": 11,
+      "rate": 1.0
+    },
+    "errors": 0
+  }
+}
