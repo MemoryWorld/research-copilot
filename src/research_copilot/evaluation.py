@@ -58,5 +58,7 @@ if __name__ == "__main__":
     if args.output:
         Path(args.output).parent.mkdir(parents=True, exist_ok=True)
         Path(args.output).write_text(text, encoding="utf-8")
-    print(text)
+    # The artifact remains human-readable UTF-8. ASCII-escaped console JSON is
+    # valid under Windows cp1252 and redirected non-UTF-8 terminal encodings.
+    print(json.dumps(result, ensure_ascii=True, indent=2))
     raise SystemExit(0 if result["passed"] == result["total"] else 1)
