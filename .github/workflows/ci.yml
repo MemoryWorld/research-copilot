@@ -15,10 +15,11 @@ jobs:
       - run: python -m ruff check --select E9,F63,F7,F82 src tests
       - run: python -m pytest -q
       - run: python -m research_copilot.evaluation --output .data/offline-evaluation.json
+      - run: python -m research_copilot.benchmark --output .data/quality-benchmark.json
       - uses: actions/upload-artifact@v4
         with:
           name: offline-evaluation-${{ matrix.os }}
-          path: .data/offline-evaluation.json
+          path: .data/*.json
   docker:
     runs-on: ubuntu-latest
     steps:
